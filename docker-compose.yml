@@ -39,6 +39,8 @@ services:
     # Сбилдить и запустить образ, 
     # описанный в Dockerfile в папке gateway
     build: ./gateway/
+    depends_on:
+      - backend
     env_file: .env
     volumes:
       - static:/staticfiles
